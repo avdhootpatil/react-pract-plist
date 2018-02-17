@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
+import logo from './logo.svg';
 
 
 
@@ -108,7 +109,7 @@ class App extends Component {
   componentDidMount() {
     setTimeout(() => {
       this.setState({serverData: fakeServerData});
-    },1000);
+    },3000);
   }
 
   render() {
@@ -128,8 +129,7 @@ class App extends Component {
               )
             }
             
-            
-            </div> : <h1 style={defaultStyle}>Loading.....</h1>
+            </div> : <img src={logo} className='App-logo'/>
             }
       </div>
     );
